@@ -13,7 +13,7 @@ export default class Me extends Component {
   render() {
     return (
       <View style={{alignItems: 'center'}}>
-        <Greeting name='Rexxar' />
+        <Greeting name='ckc' />
         <Greeting name='Jaina' />
         <Greeting name='Valeera' />
       </View>

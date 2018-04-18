@@ -5,14 +5,14 @@
  */
 
 import React, { Component } from 'react';
-//import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Tabs } from './router';
-//import Main from './main';
+//import Main from './Main';
 
-class App extends Component {
+export default class App extends Component {
     render() {
-        return <Tabs />
+        return(
+                <Tabs />
+        );
     }
 }
-
-export default App;
