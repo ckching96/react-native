@@ -6,15 +6,14 @@ import {
     View
 } from 'react-native';
 
-import Login from './login.js';
-import Signup from './signup.js'
+import Routes from './Routes';
 
 type Props = {};
-class Feed extends Component<Props> {
+class Home extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Signup/ >
+        <Routes />
       </View>
     );
   }
@@ -23,10 +22,7 @@ class Feed extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
 });
 
-export default Feed;
+export default Home;

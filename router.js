@@ -1,12 +1,12 @@
 import React from 'react';
 import { TabNavigator } from 'react-navigation';
 //import {icon} from 'react-native-elements';
-import Feed from './Feed';
+import Home from './Home';
 import Me from './Me';
 
 export const Tabs = TabNavigator({
-    Feed: {
-        screen: Feed,
+    Home: {
+        screen: Home,
         /*navigationOptions: {
             tabBarLabel: 'Feed',
             tabBarIcon: ({tintColor}) => <Icon name = "list" size = {35} color = {tintColor} />,

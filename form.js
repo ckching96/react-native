@@ -10,9 +10,6 @@ import {
 
 export default class Form extends Component<{}>{
 
-    /*constructor(props){
-
-    }*/
     render(){
         return(
             <View style = {styles.container}>
@@ -36,7 +33,6 @@ const styles = StyleSheet.create({
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginVertical: 40
     },
 
     inputBox: {
