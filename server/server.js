@@ -1,6 +1,8 @@
 var express = require("express");
 var path = require("path");
+var cors = require('cors');
 var bodyParser = require("body-parser");
+var cors = require('cors');
 
 var index = require("./routes/index.js");
 var signup = require("./routes/signup.js");
@@ -9,10 +11,12 @@ var app = express();
 
 var port = 3000;
 
+const util = require('util');
+
 app.listen(port,function(){
     console.log("Server running on port", port);
 });
-
+app.use(cors());
 //views
 
 app.set("views", path.join(__dirname, "views"));

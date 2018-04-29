@@ -12,6 +12,16 @@ import Form from './form.js'
 import {Actions} from 'react-native-router-flux';
 
 export default class Signup extends Component<{}>{
+    /*OnPressAction(){
+        console.log('hi');
+        const data = {userName: 'kwt', password: '123'};
+        request
+        .post('http://localhost:3000/api/signup')
+        .send({user: 'kwt'})
+        .then(function(res){
+            alert('Sign up successfully');
+        })
+    }*/
 
     login() {
         Actions.login()

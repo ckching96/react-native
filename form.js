@@ -9,44 +9,22 @@ import {
   Linking
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
-
+const request = require('superagent');
 
 export default class Form extends Component<{}>{
-    OnPressAction = () =>{
-        console.log("here");
-        fetch('http://localhost:3000/api/signup')
-            .then(response => response.json())
-            .then(data => console.log(data));
-        console.log("test2");
-        /*return(dispatch) => {
-            const user = {
-                data:{
-                    userName: 'ckc',
-                    password: 'ckc123'
-                }
-        };
 
-        request.get("http://localhost:3000/api/signup")
-        .send(user)
-        .finish((error, res) => {
-            dispatch({
-                type: userName,
-                user: res.body
-            })
-
+    OnPressAction(){
+        console.log('hi');
+        const data = {userName: 'kwt', password: '123'};
+        request
+        .post('http://localhost:3000/api/signup')
+        .send({user: 'kwt'})
+        .then(function(res){
+            alert('Sign up successfully');
         })
+    }
 
-    }*/
-    // OnPressAction(){
-    //   var url = 'http://localhost:3000/api/signup'
-    //       Linking.canOpenURL(url).then(supported => {
-    //           if (!supported) {
-    //               console.log('Can\'t handle url: ' + url);
-    //           } else {
-    //               return Linking.openURL(url);
-    //           }
-    //       }).catch(err => console.error('An error occurred', err));
-}
+
 
     render(){
         return(
