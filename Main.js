@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import {
   Text,
   View
@@ -18,4 +18,4 @@ class Main extends Component {
 
 
 
-export default Main;
+export default Main;*/
