@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
@@ -17,4 +17,4 @@ export default class Form extends Component<{}>{
             null
         )
     }
-}
+}*/

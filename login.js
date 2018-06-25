@@ -8,9 +8,9 @@ import {
 } from 'react-native';
 
 import Logo from './logo.js';
-import Form from './form.js';
 import {Actions} from 'react-native-router-flux';
 const request = require('superagent');
+
 
 export default class Login extends Component<{}>{
 
@@ -24,18 +24,25 @@ export default class Login extends Component<{}>{
 
     OnPressAction = () => {
         console.log('yo');
-        let loggedin = false;
+        //let loggedin = false;
         fetch('http://localhost:3000/api/signup')
         .then((res) => {return res.json()})
         .then((data) => {
+            let loggedin = false;
             data.forEach((user) => {
                 var name = user.userName
                 var pw = user.password
                 if (name == this.state.username && pw == this.state.password && !loggedin){
-                    alert('Login successfully');
-                    global.loggedin = true;
+                    //alert('Login successfully');
+                    loggedin = true;
                 }
+                console.log(loggedin);
             })
+            if(loggedin == false){
+                alert('login failed');
+            } else {
+                alert('login success');
+            }
         })
     }
 
@@ -47,7 +54,6 @@ export default class Login extends Component<{}>{
         return(
             <View style = {styles.container}>
                 <Logo />
-                //<Form type = "Login" />
                 <TextInput style = {styles.inputBox}
                     placeholder="User Name"
                     placeholderTextColor = "#ffffff"

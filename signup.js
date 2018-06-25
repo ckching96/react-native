@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 
 import Logo from './logo.js';
-import Form from './form.js';
 
 import {Actions} from 'react-native-router-flux';
 const request = require('superagent');
@@ -44,7 +43,6 @@ export default class Signup extends Component<{}>{
         return(
             <View style = {styles.container}>
                 <Logo />
-                //<Form type = "Sign up" />
                 <TextInput style = {styles.inputBox}
                     placeholder="User Name"
                     placeholderTextColor = "#ffffff"
